@@ -1,0 +1,6 @@
+[submodule "python-embedded"]
+	path = python-embedded
+	url = https://github.com/video-dl/python-embedded.git
+[submodule "youtube-dl"]
+	path = youtube-dl
+	url = https://github.com/rg3/youtube-dl.git
