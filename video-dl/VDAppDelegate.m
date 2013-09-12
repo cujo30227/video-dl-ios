@@ -1,4 +1,5 @@
 #import "VDAppDelegate.h"
+#import "VDVideoBrowser.h"
 
 
 @implementation VDAppDelegate
@@ -8,7 +9,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor grayColor];
     [self.window makeKeyAndVisible];
-	self.window.rootViewController = [[UIViewController alloc] init];
+	VDVideoBrowser *videoBrowser = [[VDVideoBrowser alloc] initWithNibName:@"VDVideoBrowser" bundle:nil];
+	UINavigationController *videoBrowserNavigationController = [[UINavigationController alloc] initWithRootViewController:videoBrowser];
+	self.window.rootViewController = videoBrowserNavigationController;
 
 	self.videodl = [[VDVideoDL alloc] init];
 
