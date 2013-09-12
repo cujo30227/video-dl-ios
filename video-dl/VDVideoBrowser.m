@@ -1,3 +1,5 @@
+#import <MediaPlayer/MediaPlayer.h>
+
 #import "VDVideoBrowser.h"
 #import "VDVideoDL.h"
 
@@ -53,13 +55,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+	VDVideo *video = [self videoInfoForIndexPath:indexPath];
+	NSURL *url = [NSURL fileURLWithPath:video.videoPath];
+	MPMoviePlayerViewController *player =
+	[[MPMoviePlayerViewController alloc] initWithContentURL:url];
+	[self presentMoviePlayerViewControllerAnimated:player];
 }
 
 #pragma mark Custom methods

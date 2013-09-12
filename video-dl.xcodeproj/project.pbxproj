@@ -17,6 +17,7 @@
 		DB4A953817DCF2F500A96E5D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DB4A953717DCF2F500A96E5D /* Default.png */; };
 		DB4A953A17DCF2F500A96E5D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB4A953917DCF2F500A96E5D /* Default@2x.png */; };
 		DB4A953C17DCF2F500A96E5D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB4A953B17DCF2F500A96E5D /* Default-568h@2x.png */; };
+		DB5A203217E2291300346A80 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5A203117E2291300346A80 /* MediaPlayer.framework */; };
 		DB5BA89517DFAC11003E080A /* VDVideoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5BA89317DFAC11003E080A /* VDVideoBrowser.m */; };
 		DB5BA89617DFAC11003E080A /* VDVideoBrowser.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5BA89417DFAC11003E080A /* VDVideoBrowser.xib */; };
 		DB72AE2817DD094600877C35 /* pyutils.c in Sources */ = {isa = PBXBuildFile; fileRef = DB72AE2717DD094600877C35 /* pyutils.c */; };
@@ -41,6 +42,7 @@
 		DB4A953717DCF2F500A96E5D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DB4A953917DCF2F500A96E5D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DB4A953B17DCF2F500A96E5D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DB5A203117E2291300346A80 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		DB5BA89217DFAC11003E080A /* VDVideoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDVideoBrowser.h; sourceTree = "<group>"; };
 		DB5BA89317DFAC11003E080A /* VDVideoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDVideoBrowser.m; sourceTree = "<group>"; };
 		DB5BA89417DFAC11003E080A /* VDVideoBrowser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDVideoBrowser.xib; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5A203217E2291300346A80 /* MediaPlayer.framework in Frameworks */,
 				DB4A952617DCF2F500A96E5D /* UIKit.framework in Frameworks */,
 				DB4A952817DCF2F500A96E5D /* Foundation.framework in Frameworks */,
 				DB4A952A17DCF2F500A96E5D /* CoreGraphics.framework in Frameworks */,
@@ -90,6 +93,7 @@
 				DB4A952517DCF2F500A96E5D /* UIKit.framework */,
 				DB4A952717DCF2F500A96E5D /* Foundation.framework */,
 				DB4A952917DCF2F500A96E5D /* CoreGraphics.framework */,
+				DB5A203117E2291300346A80 /* MediaPlayer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
