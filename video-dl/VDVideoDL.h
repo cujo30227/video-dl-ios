@@ -14,4 +14,6 @@
 
 -(void)downloadFromUrl:(NSString *)url;
 
++(NSString *)videosFolder;
+
 @end

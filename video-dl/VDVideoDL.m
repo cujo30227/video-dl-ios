@@ -21,7 +21,7 @@ static PyObject *progress_hook(PyObject *self, PyObject *args)
 	if (self)
 	{
 		[self initPythonInterpreter];
-		NSString *docs_path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"videos/%(extractor)s-%(id)s/%(id)s.%(ext)s"];
+		NSString *video_template = [[VDVideoDL videosFolder] stringByAppendingPathComponent:@"%(extractor)s-%(id)s.%(ext)s/%(extractor)s-%(id)s.%(ext)s"];
 
 		// We create a module for holding the progress hook
 		static PyMethodDef HooksMethods[] = {
@@ -33,7 +33,7 @@ static PyObject *progress_hook(PyObject *self, PyObject *args)
 
 		PyObject *videodl_mod = PyImport_ImportModule("video_dl");
 		PyObject *VideoDL = PyObject_GetAttrString(videodl_mod, "VideoDL");
-		PyObject *init_args = Py_BuildValue("sO", [docs_path UTF8String], hook);
+		PyObject *init_args = Py_BuildValue("sO", [video_template UTF8String], hook);
 		vdl = PyObject_CallObject(VideoDL, init_args);
 
 
@@ -81,13 +81,9 @@ static PyObject *progress_hook(PyObject *self, PyObject *args)
 	PyObject_CallMethod(vdl, "extract_info", "(s)", [url UTF8String], NULL);
 }
 
--(NSDictionary *)infoForVideo:(NSString *)videoPath
++(NSString *)videosFolder
 {
-	if ([videoPath hasSuffix:@".part"] == YES) {videoPath = [videoPath stringByDeletingPathExtension];}
-	NSString *json_filename = [videoPath stringByAppendingPathExtension:@"info.json"];
-	//NSString *json = [NSString stringWithContentsOfFile:json_filename encoding:NSUTF8StringEncoding error:nil];
-	NSData *json_data = [NSData dataWithContentsOfFile:json_filename];
-	return [NSJSONSerialization JSONObjectWithData:json_data options:0 error:nil];
+	return [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"videos"];
 }
 
 @end
