@@ -31,13 +31,13 @@ video-dl/python/pylib/lib: ${CPython}/Lib
 video-dl/python/pylib/exec: ${PY_EMBED}/pylib/exec
 	cp -Rf "$<" "$@"
 
-video-dl/python/pylib/exec/exec/include/python2.7/pyconfig.h: ${PY_EMBED}/pylib/pyconfig.h
+video-dl/python/pylib/exec/include/python2.7/pyconfig.h: ${PY_EMBED}/pylib/pyconfig.h video-dl/python/pylib/exec
 	cp -f "$<" "$@"
 
 video-dl/python/pylib/pyconfig.h: ${PY_EMBED}/pylib/pyconfig.h
 	cp -f "$<" "$@"
 
-video-dl/python/pylib: video-dl/python/pylib/pyconfig.h video-dl/python/pylib/lib  video-dl/python/pylib/exec/exec/include/python2.7/pyconfig.h video-dl/python/pylib/exec
+video-dl/python/pylib: video-dl/python/pylib/pyconfig.h video-dl/python/pylib/lib  video-dl/python/pylib/exec/include/python2.7/pyconfig.h video-dl/python/pylib/exec
 
 video-dl/python/modules: 
 	mkdir -p "$@"
@@ -52,5 +52,3 @@ xcodefiles: video-dl/python
 
 clean:
 	rm -fR "${PY_EMBED}/build" "${PY_EMBED}/libpython.a" "video-dl/python/pylib"
-
-.PHONY: video-dl/python/pylib/exec
