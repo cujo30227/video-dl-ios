@@ -17,3 +17,4 @@ profile
 DerivedData
 .idea/
 video-dl/python/modules/youtube_dl
+video-dl/python/pylib
