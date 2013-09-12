@@ -1,5 +1,6 @@
 #import "VDVideoDL.h"
 #import "VDAppDelegate.h"
+#import "VDVideo.h"
 
 #import "pyutils.h"
 
@@ -68,10 +69,9 @@ static PyObject *progress_hook(PyObject *self, PyObject *args)
 	// py_print(progress);
 	PyObject *status = PyDict_GetItemString(progress, "status");
 	if (PyObject_Compare(status, PyString_FromString("finished")) == 0) {
-		NSLog(@"Finished extraction");
 		NSString *filename = [NSString stringWithUTF8String:PyString_AsString(PyDict_GetItemString(progress, "filename"))];
-		NSDictionary *info = [self infoForVideo:filename];
-		NSLog(@"%@", [info objectForKey:@"description"]);
+		VDVideo *video = [[VDVideo alloc] initWithFolder:[filename stringByDeletingLastPathComponent]];
+		NSLog(@"Downloaded finished for id: %@", video.id);
 	};
 	Py_RETURN_NONE;
 }

@@ -20,6 +20,7 @@
 		DB72AE2817DD094600877C35 /* pyutils.c in Sources */ = {isa = PBXBuildFile; fileRef = DB72AE2717DD094600877C35 /* pyutils.c */; };
 		DB776B4117DD01C400297970 /* python in Resources */ = {isa = PBXBuildFile; fileRef = DB776B4017DD01C400297970 /* python */; };
 		DB776B4317DD01F100297970 /* libpython.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB776B4217DD01F100297970 /* libpython.a */; };
+		DBC0803517E1E31900C2C0E9 /* VDVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC0803417E1E31900C2C0E9 /* VDVideo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		DB72AE2717DD094600877C35 /* pyutils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pyutils.c; sourceTree = "<group>"; };
 		DB776B4017DD01C400297970 /* python */ = {isa = PBXFileReference; lastKnownFileType = folder; path = python; sourceTree = "<group>"; };
 		DB776B4217DD01F100297970 /* libpython.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpython.a; path = build/python/libpython.a; sourceTree = SOURCE_ROOT; };
+		DBC0803317E1E31900C2C0E9 /* VDVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDVideo.h; sourceTree = "<group>"; };
+		DBC0803417E1E31900C2C0E9 /* VDVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDVideo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				DB4A953517DCF2F500A96E5D /* VDAppDelegate.m */,
 				DB457CC017DDD04900DFC634 /* VDVideoDL.h */,
 				DB457CC117DDD04900DFC634 /* VDVideoDL.m */,
+				DBC0803317E1E31900C2C0E9 /* VDVideo.h */,
+				DBC0803417E1E31900C2C0E9 /* VDVideo.m */,
 				DB72AE2617DD093900877C35 /* pyutils.h */,
 				DB72AE2717DD094600877C35 /* pyutils.c */,
 				DB4A952C17DCF2F500A96E5D /* Supporting Files */,
@@ -195,6 +200,7 @@
 				DB4A953617DCF2F500A96E5D /* VDAppDelegate.m in Sources */,
 				DB72AE2817DD094600877C35 /* pyutils.c in Sources */,
 				DB457CC217DDD04900DFC634 /* VDVideoDL.m in Sources */,
+				DBC0803517E1E31900C2C0E9 /* VDVideo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
