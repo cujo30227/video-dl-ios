@@ -9,7 +9,7 @@ static PyObject *progress_hook(PyObject *self, PyObject *args)
 {
 	// It's not the best way to call the method in videodl,
 	// but we can't use function pointers to Obj-C methods.
-	VDVideoDL *videodl = [((VDAppDelegate *)[[UIApplication sharedApplication] delegate]) videodl];
+	VDVideoDL *videodl = [VDAppDelegate currentVideoDL];
 	return  [videodl progressHookWithSelf:self AndArgs:args];
 }
 
